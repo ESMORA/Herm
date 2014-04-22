@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Yify Movies</title>
+	</head>
+	<body>
+		<div id="moviesContainer"></div>
+		<script type="text/javascript" src="AjaxUtil.js"></script>
+		<script type="text/javascript">
+		Herm.Ajax.request({
+			url : "data/upcoming.json",
+			params : {
+				genere : "Fantasy",
+				limit : 10
+			},
+			callback : function(){
+				console.log(arguments);
+			},
+			timeOut : 1000
+		});
+		</script>
+	</body>
+</html>
